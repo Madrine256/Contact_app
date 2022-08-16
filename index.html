@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Contact app</title>
+    <script src="main.js" defer></script>
+    <!-- ? link fontaweseome cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet" href="./dist/css/styles.css">
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <div class="top">
+                <i class="fa-solid fa-chevron-left"></i>
+                <input type="search" name="search" id="search" placeholder="Search...">   
+                <i class="fa-solid fa-microphone"></i> 
+            </div>
+                  <div class="recent-dails">
+                     <p>No recent calls</p>
+                  </div>
+        </div>
+        <div class="main-nav">
+                <h1>Phone</h1>
+            
+            <div class="right-bar">
+                <ul>
+                    <li id="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </li>
+                    <li id="settings">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </li>
+                </ul>
+                
+                <div class="account">
+                    <ul style="display: none;">
+                        <li> <a href="#speeddail">speed dail numbers</a></li>
+                        <li> <a href="#openlast">open to last viewd</a></li>
+                        <li> <a href="#settings">settings</a></li>
+                        <li> <a href="#contact">contact us </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <main class="middle-section">
+                <div class="dail-container">
+                    <div class="input-group">
+                        <input type="text" id="number" value="+(234) 785-456-789">
+                    </div>
+                    <div class="btns-container">
+                        <button data-index="1">1</button>
+                        <button data-index="2">2</button>
+                        <button data-index="3">3</button>
+                        <button data-index="4">4</button>
+                        <button data-index="5">5</button>
+                        <button data-index="6">6</button>
+                        <button data-index="7">7</button>
+                        <button data-index="8">8</button>
+                        <button data-index="9">9</button>
+                        <button data-index="*">*</button>
+                        <button data-index="0">0</button>
+                        <button data-index="#">#</button>
+                        
+                    </div>
+
+                    <button class="btn-call">
+                        <i class="fa-solid fa-phone"></i>
+                    </button>
+                </div>
+
+            </main>
+        <div class="footer-nav">
+            <ul class="nav">
+                <li >
+                    <a href="#home" class="active-list"> keypad </a>
+                </li>
+                <li>
+                    <a href="#recents">recents</a>
+                </li>
+                <li>
+                    <a href="#contacts">contacts</a>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+</body>
+</html>
