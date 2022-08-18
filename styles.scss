@@ -39,9 +39,118 @@ body{
     overflow: hidden;
     position: relative;
 
+// ?when call btn is clicked styles to open calling container
+    .call-div{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background:linear-gradient(to right , rgb(148, 100, 100), rgb(163, 49, 68), purple);
+        color:#fff;
+       display: none;
+        transition: $trans;
+
+        .top-nav{
+            padding: 1rem 2rem;
+
+            .call-indicator{
+                display: flex;
+                justify-content: space-around;
+                padding: 1rem;
+
+                span{
+                   flex-grow:2;
+                   font-size: 1.5rem;
+
+                   i{
+                    font-size: 1rem;
+                    margin-right: 1rem;
+                   }
+
+                   #duration{
+                    font-weight: bolder;
+                    letter-spacing:.3rem;
+                   }
+                }
+                i{
+                    font-weight: bolder;
+                    font-size: 1.5rem;
+                }
+            }
+
+            .caller-id{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+                line-height: 1.7;
+
+               p{
+                font-weight: bolder;
+                letter-spacing: 1.2px;
+               }
+            }
+
+            .navigation-tabs{
+                background-color: #fff;
+                position: absolute;
+                bottom: 40px;
+                border-radius: 10px;
+                height: 250px;
+                width: 250px;
+                color:#000;
+
+                .nav{
+                    margin-bottom: 1rem;
+                    ul{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        padding: 1rem;
+    
+                        li {
+                            display: inline-block;
+                            text-align: center;
+                            padding: 0.2rem;
+                            width:100px;
+                            // border: 1px solid;
+                            
+                            i{
+                                font-size: 1.5rem;
+                                text-align: center;
+                            }
+                            span{
+                                display: block;
+                                text-align: center;
+                            }
+                        }
+                } 
+
+                }
+                .last-nav{
+                    position: absolute;
+                    left: 50%;
+                    bottom:5px;
+                    transform: translate(-50%);
+                    font-size: 2rem;
+                    border-radius: 50%;
+                    padding: 0.8rem;
+                    background-color: red;
+                    color:white;
+                    border: none;
+                }
+                
+               
+            }
+        }
+    }
+
     .search-container{
         position: absolute;
-        left: -300px;
+        right: -300px;
         top: 0;
         width:100%;
         height: 100%;
@@ -82,7 +191,35 @@ body{
         }
 
     }
+    .account{
+        position: absolute;
+        top: 0;
+        right: -250px;
+        background-color: rgb(48, 45, 45);
+        overflow: hidden;
+        border-radius: 10px;
+        transition: $trans;
 
+        ul{
+           
+            li{
+                padding: .5rem 1.5rem;
+                display: block;
+                transition: $trans;
+    
+                a{
+                    color:$clr;
+                    text-decoration: none;
+                    font-size: 1rem;
+                }
+                &:hover{
+                    background-color: rgb(80, 78, 78);
+                }
+            }
+        }
+        
+       
+    }
     // ?main nav styles
         .main-nav{
             padding: 1rem;
@@ -210,16 +347,16 @@ body{
                 li{
                     display: inline-block;
                     padding: .4rem;
+                 
 
                     a{
                         color:$clr;
                         text-decoration: none;
-                        font-size: 1rem;
+                        font-size: 1.3rem;
                         font-weight: bold;
                         text-transform: capitalize; 
                           
-                }
-                
+                }               
                 .active-list{
                     color: green;
                     text-decoration: underline;
